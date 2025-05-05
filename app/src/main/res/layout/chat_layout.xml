@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- AI/Bot Message Container -->
+    <LinearLayout
+        android:id="@+id/botLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <!-- AI Avatar and Name -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ailogo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DefinedIn"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- AI Message Bubble -->
+        <TextView
+            android:id="@+id/botTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            android:background="@drawable/bot_message_background"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textIsSelectable="true"
+            android:lineSpacingExtra="4dp"
+            android:elevation="1dp" />
+
+        <!-- Timestamp for AI message -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="✓Just now"
+            android:textSize="10sp"
+            android:textColor="#9E9E9E" />
+    </LinearLayout>
+
+    <!-- User Message Container -->
+    <LinearLayout
+        android:id="@+id/meLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <!-- User Message Bubble -->
+        <TextView
+            android:id="@+id/meTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            android:background="@drawable/user_message_background"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textIsSelectable="true"
+            android:lineSpacingExtra="4dp"
+            android:elevation="1dp" />
+
+        <!-- Timestamp for user message -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Just now✓"
+            android:textSize="10sp"
+            android:textColor="#9E9E9E" />
+    </LinearLayout>
+
+    <!-- Typing indicator (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/typingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI is typing..."
+            android:textColor="#757575"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

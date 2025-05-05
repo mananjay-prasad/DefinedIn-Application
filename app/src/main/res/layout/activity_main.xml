@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1AF8C80A"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Heading Text -->
+    <TextView
+        android:id="@+id/HeadingTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Welcome to DefinedIn!\nAsk for the definition of any word you want."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:elevation="16dp"/>
+
+    <!-- RecyclerView for definitions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomSection"
+        android:layout_below="@+id/HeadingTxt"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical"
+        android:background="#23000000"/>
+
+    <!-- Word Limit and SeekBar container with Tone Spinner -->
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Word Limit Text and Tone Spinner container -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Word Limit Text -->
+            <TextView
+                android:id="@+id/wordLimitTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:text="Word limit: 10"
+                android:textColor="#C8312F2F"
+                android:textSize="14sp" />
+
+            <!-- Tone Spinner -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/toneTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tone:"
+                    android:textColor="#C8312F2F"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp"/>
+
+                <Spinner
+                    android:id="@+id/toneSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/spinner_background"
+                    android:popupBackground="#FFFFFF"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:max="50"
+            android:progress="10"
+            android:progressTint="@color/black"
+            android:thumbTint="@color/black" />
+    </LinearLayout>
+
+    <!-- Input area with text field and send button -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@drawable/roundcorner"
+            android:hint="Write here"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            android:textSize="16sp"
+            android:elevation="2dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/BtnSend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="2"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Send button"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/send"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+    </LinearLayout>
+
+</RelativeLayout>
