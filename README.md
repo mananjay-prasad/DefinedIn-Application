@@ -91,12 +91,8 @@ Contributions are welcome! If you'd like to contribute:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
 
-- Dictionary API service provided by [Your API Provider]
-- Icons from [Icon Source]
-- Design inspiration from [Design Source]
+- Dictionary API service provided by [https://define-i05a.onrender.com/api/docs/]
+- Design made by [https://claude.ai/chat/48c31ed0-8f99-4ea2-bc23-74766542468e]
