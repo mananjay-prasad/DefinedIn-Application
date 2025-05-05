@@ -3,6 +3,10 @@
 ## Overview
 DefinedIn is a lightweight, user-friendly Android dictionary application that allows users to look up word definitions with customizable tone and length preferences. The app provides definitions in various styles, from formal academic definitions to more humorous or casual explanations.
 
+![App Splash Screen](images/w)
+![App Home Screen](images/)
+![Definition View](images/)
+
 
 ## Features
 
