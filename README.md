@@ -4,7 +4,7 @@
 DefinedIn is a lightweight, user-friendly Android dictionary application that allows users to look up word definitions with customizable tone and length preferences. The app provides definitions in various styles, from formal academic definitions to more humorous or casual explanations.
 
 <p align="center">
-<img src="images/SplashScreen.jpeg" width="20%" height="30%" alt="Splash Screen">
+<img src="images/SplashScreen.jpeg" width="20%" height="30%" margin="10%" alt="Splash Screen">
 <img src="images/LoadingScreen.jpeg" width="20%" height="30%" alt="Loading Screen">
 <img src="images/HomeScreen.jpeg" width="20%" height="30%" alt="Home Screen">
 </p>
